@@ -2,8 +2,12 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-var cors = require('cors')
-const bd = require('./bd')
+var cors = require('cors');
+//const bd = require('./bd');
+import dotenv from 'dotenv';
+
+require('dotenv').config();
+mongoose.connect(process.env.MONGODB)
 
 var indexRouter = require('./routes/index');
 var myroutes = require('./routes/api');
