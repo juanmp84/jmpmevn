@@ -4,10 +4,16 @@ var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
 //const bd = require('./bd');
-import dotenv from 'dotenv';
+var dotenv = require('dotenv');
 
 require('dotenv').config();
 mongoose.connect(process.env.MONGODB)
+    .then(() => {
+        console.log('database connected')
+    })
+    .catch(() => {
+
+    })
 
 var indexRouter = require('./routes/index');
 var myroutes = require('./routes/api');
