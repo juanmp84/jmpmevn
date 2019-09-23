@@ -3,18 +3,19 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 var cors = require('cors');
+const bd = require('./bdmlab')
 //const bd = require('./bd');
-var dotenv = require('dotenv');
-const mongoose = require('mongoose');
+// var dotenv = require('dotenv');
+// const mongoose = require('mongoose');
 
-require('dotenv').config();
-mongoose.connect(process.env.MONGODB)
-    .then(() => {
-        console.log('database connected')
-    })
-    .catch(() => {
+// require('dotenv').config();
+// mongoose.connect(process.env.MONGODB)
+//     .then(() => {
+//         console.log('database connected')
+//     })
+//     .catch(() => {
 
-    })
+//     })
 
 var indexRouter = require('./routes/index');
 var myroutes = require('./routes/api');
