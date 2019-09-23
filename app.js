@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cors = require('cors');
 //const bd = require('./bd');
 var dotenv = require('dotenv');
+const mongoose = require('mongoose');
 
 require('dotenv').config();
 mongoose.connect(process.env.MONGODB)
